@@ -21,3 +21,7 @@ HTML, CSS, vanilla JavaScript, SVG and local browser state.
 ## Development approach
 
 Independent product direction, visual system design, iteration, testing, and AI-assisted implementation. The emphasis is on turning a domain-specific concept into a coherent working instrument rather than a generic app shell.
+
+## Release
+
+Current production build: **V12.15**. Promoted from the phone-gate release candidate after automated regression found no reproducible P0 or P1 defects. Remaining hardware/accessibility checks are documented in `qa/REGRESSION_VERDICT_V12_15.md`.
