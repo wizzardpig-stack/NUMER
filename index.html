@@ -6,27 +6,41 @@
 <meta name="theme-color" content="#c8b27e" />
 <meta name="description" content="A local-first Pythagorean numerology instrument for names, identity patterns, comparison, and symbolic reflection." />
   <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://wizzardpig-stack.github.io/NUMER/" />
+  <!-- Social card: og:image / twitter:image require numer-social-card.png (1200x630 PNG) at the site root, beside index.html. -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="NUMER" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://wizzardpig-stack.github.io/NUMER/" />
   <meta property="og:title" content="NUMER · Liber Numerorum" />
   <meta property="og:description" content="A local-first Pythagorean numerology instrument for names, identity patterns, comparison, and symbolic reflection." />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://wizzardpig-stack.github.io/NUMER/numer-social-card.png" />
+  <meta property="og:image:secure_url" content="https://wizzardpig-stack.github.io/NUMER/numer-social-card.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="NUMER cosmograph: a parchment numerology plate with a central number, three coloured rings and an outer letter wheel." />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="NUMER · Liber Numerorum" />
   <meta name="twitter:description" content="Trace the numerical architecture of a name." />
+  <meta name="twitter:image" content="https://wizzardpig-stack.github.io/NUMER/numer-social-card.png" />
+  <meta name="twitter:image:alt" content="NUMER cosmograph: a parchment numerology plate with a central number, three coloured rings and an outer letter wheel." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23efe4c7'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%236d5631' stroke-width='2'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-size='28' fill='%236d5631'%3E9%3C/text%3E%3C/svg%3E" />
 <meta name="application-name" content="NUMER" />
+<meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <title>NUMER - Liber Numerorum</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=Libre+Caslon+Display&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=Libre+Caslon+Display&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#d7c391;--paper-hi:#eadcb9;--paper-mid:#cbb27b;--paper-low:#9f7d48;
   --ink:#21180f;--ink-soft:#58452c;--ink-faint:#7c6645;
   --red:#873725;--blue:#355b70;--green:#4f6d57;--gold:#9d7534;--gold-hi:#c5a35e;
   --shadow:rgba(43,27,11,.28);--rule:rgba(68,48,25,.35);--rule-soft:rgba(68,48,25,.17);
-  --page-max:1720px;--serif:"EB Garamond",Georgia,serif;--display:"Libre Caslon Display","IM Fell English",Georgia,serif;--fell:"IM Fell English",Georgia,serif;--mono:"IBM Plex Mono",monospace;
+  --page-max:1720px;--serif:"Cormorant Garamond",Georgia,serif;--display:"Libre Caslon Display","IM Fell English",Georgia,serif;--fell:"IM Fell English",Georgia,serif;--mono:"IBM Plex Mono",monospace;
 }
 *{box-sizing:border-box}html{background:#392b19;color-scheme:light}body{margin:0;min-height:100vh;font-family:var(--serif);color:var(--ink);background:#392b19;overflow-x:hidden}
 button,input,select{font:inherit;color:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--red);outline-offset:3px}
@@ -708,7 +722,7 @@ body.nocturne[data-palette="garden"]{--red:#8b70ad;--blue:#5fa87c;--green:#b9945
 
   /* Correspondence table stays readable instead of microscopic. */
   .tabula{overflow:hidden;margin-bottom:18px}
-  .py-table{font-size:10px}.py-cell{min-height:27px;padding:2px 0}.py-cell.num{font-size:11px}
+  .py-table{font-size:10px}.py-cell{font-size:10px;min-height:27px;padding:2px 0}.py-cell.num{font-size:11px}
   .notae{margin-top:10px}.note{padding:10px 0}.note p{font-size:12.5px}
 
   /* Deep Reading: compact selectors, number disc does not eat the page. */
@@ -779,7 +793,7 @@ body.nocturne[data-palette="garden"]{--red:#8b70ad;--blue:#5fa87c;--green:#b9945
 @media(max-width:360px){
   .masthead{padding-left:10px;padding-right:10px}.view{padding-left:10px;padding-right:10px}
   .brand{font-size:29px}.mode-switch button{font-size:10px}
-  .mobile-nav{padding-left:3px;padding-right:3px}.mobile-nav button{font-size:9px!important}
+  .mobile-nav{padding-left:3px;padding-right:3px}.mobile-nav button{font-size:10px!important}
   .result-marginal .core-result{grid-template-columns:1fr}.core-sigil{border-right:0!important;border-bottom:1px solid var(--rule-soft)!important}.core-sigil:last-child{border-bottom:0!important}
   .deep-essay h3{font-size:28px}.deep-thesis{font-size:17px}
   .figure-index button{min-width:108px}
@@ -916,6 +930,121 @@ button,input,select{touch-action:manipulation}
   .compare-folio{grid-template-columns:1fr}
 }
 
+/* V12.15.1 PUBLIC RELEASE HARDENING */
+/* Phone landscape wider than 840px (current iPhones) draws the same phone plate typography as
+   every other phone size instead of desktop labels on a ~300px plate (matches NARROW() in script). */
+@media(orientation:landscape) and (max-height:500px) and (min-width:841px){
+  .c-label-main{font-size:23px;letter-spacing:.02em}
+  .c-label-sub{font-size:18px!important}
+  .c-alpha,.c-sector{font-size:22px}
+  .c-center-type{font-size:16px;letter-spacing:.12em}
+  .c-center-num{font-size:76px}
+  .c-name{letter-spacing:.02em}.c-name-foot{letter-spacing:.1em}
+  .c-medallion text.num{font-size:30px}
+  .c-turn{animation:none}.band-glow,.nocturne .band-glow{filter:none}
+  .c-edge{opacity:.62;stroke-width:1.3}
+  .nocturne .c-sphere,.nocturne .c-center-num,.nocturne .c-center-ring,.nocturne .c-medallion .bead,.nocturne .c-dna.dominant{filter:none}
+}
+/* Short landscape screens: no desktop 760px minimum page height (it left blank scroll under short views). */
+@media(orientation:landscape) and (max-height:500px){
+  .view{min-height:auto}
+  .deep-number-row button,.setting-choice{min-width:44px}
+}
+/* Touch tablets use the same 44px minimum targets already applied to phones. */
+@media(pointer:coarse) and (min-width:601px){
+  .mode-switch button,.deep-layer,.deep-number-row button,.deep-visual-bridge button,.setting-choice,#clearArchive,.compare-picker select,.scribe-input,.scribe-select,.manuscript-action{min-height:44px}
+  .deep-number-row button,.setting-choice{min-width:44px}
+  .scribe-input[type=date]{font-size:16px}  /* 15px desktop date field would trigger iOS focus zoom */
+}
+/* The brand is the document h1; keep its manuscript styling, not browser heading defaults. */
+h1.brand{margin:0;font-weight:400}
+/* Number sectors: a transparent hit band makes the thin arc a comfortable touch target. */
+.c-num-hit{fill:none;stroke:transparent;stroke-width:56;pointer-events:stroke}
+.number-target:hover .c-dna{stroke-width:23}
+
+
+/* V12.15.2 FINAL LEGIBILITY PASS
+   Raise the smallest manuscript/interface type without changing product geometry,
+   calculations, navigation, touch behaviour, or the cosmograph name safe-zone. */
+.chapter small{font-size:11px}
+.brand small{font-size:12px}
+.mode-switch,.mode-switch button{font-size:12px}
+.scribe-label small{font-size:11px}
+.figure-sub,.figure-caption{font-size:13px;line-height:1.5}
+.core-sigil span{font-size:12px}
+.core-sigil small{font-size:12px}
+.inspect-row{font-size:12px}
+.strip-section p{font-size:13px;line-height:1.55}
+.arith{font-size:12px;line-height:1.7}
+.archive-type{font-size:12px}
+.archive-nums{font-size:13px}
+.archive-delete{font-size:12px}
+.signature{font-size:11px}
+.lab-note h3{font-size:13px}
+.lab-note p{font-size:13px;line-height:1.55}
+.lab-legend{font-size:12px}
+.compare-side p{font-size:13px}
+.concord-item b,.concord-item p{font-size:12px}
+.toast{font-size:13px}
+.visual-limit-note{font-size:12.5px}
+.c-small{font-size:10px}
+.c-value{font-size:11px}
+.c-medallion text.lab{font-size:10px}
+.c-name-foot{font-size:12px}
+
+@media(max-width:600px){
+  .mobile-nav button{font-size:11px!important;line-height:1.12!important}
+  .brand small{font-size:11px}
+  .mode-switch button{font-size:11px}
+  .scribe-label{font-size:13px}
+  .scribe-label small{font-size:11px}
+  .figure-sub,.figure-caption{font-size:13px}
+  .core-sigil span{font-size:11px}
+  .core-sigil small{font-size:11px}
+  .archive-type{font-size:12px}
+  .archive-nums{font-size:12px}
+  .lab-legend{font-size:12px}
+  .concord-item b,.concord-item p{font-size:12px}
+}
+@media(max-width:360px){
+  .mobile-nav button{font-size:11px!important}
+}
+
+/* V12.15.4 BODY SERIF REFINEMENT
+   Replace the plain EB Garamond body/reference family globally with Cormorant
+   Garamond. All elements that used --serif inherit the new family; display,
+   Fell, mono, geometry, interaction and calculations remain unchanged. */
+/* V12.15.3 MANUSCRIPT TYPE REFINEMENT
+   Make secondary copy feel more like an old printed folio while preserving the
+   V12.15.2 legibility sizes and all geometry/interaction behavior. */
+.chapter small,.brand small,.scribe-label small,
+.figure-sub,.figure-caption,.core-sigil small,
+.archive-type,.lab-note p,.compare-side p,.toast,.visual-limit-note{
+  font-family:var(--fell);
+  font-style:italic;
+}
+.core-sigil span,.lab-note h3,.concord-item b{
+  font-family:var(--display);
+  letter-spacing:.025em;
+}
+.mobile-nav button{
+  font-family:var(--fell);
+  font-style:italic;
+  letter-spacing:.01em;
+}
+.inspect-row b,.setting-group h3,.archive-name{font-family:var(--display)}
+
+/* V12.15.5 MOBILE PERFORMANCE HARDENING */
+@media (max-width:840px), (pointer:coarse){
+  .paper-specks{display:none!important}
+  .mobile-nav{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:var(--paper)!important;box-shadow:0 -2px 8px rgba(43,27,11,.18)!important}
+  .nocturne .mobile-nav{background:var(--paper)!important}
+  .c-turn,.c-pulse{animation:none!important}
+  .c-pulse{opacity:0!important}
+  .band-glow,.c-sphere,.c-dna,.c-center-ring,.c-center-num,.c-medallion text.num,.c-medallion .bead{filter:none!important}
+  .figure-living .magic-path,.figure-living .magic-sum,.figure-living .pair-path,.figure-living .form-dot,.figure-living .proof-area,.figure-living .planet-node{animation:none!important}
+  .view.active{animation-duration:.22s}
+}
 </style>
 </head>
 <body>
@@ -929,7 +1058,7 @@ button,input,select{touch-action:manipulation}
 
   <header class="masthead">
     <div class="title-row">
-      <div class="brand">NUMER<small>Liber Numerorum</small></div>
+      <h1 class="brand">NUMER<small>Liber Numerorum</small></h1>
       <div class="folio-mark"><b>Numerical Cosmograph</b>A living plate of letters, numbers, and identity.</div>
       <div class="mode-switch" aria-label="Manuscript appearance"><button type="button" data-mode="illuminated" class="active">Illuminated</button><span>✦</span><button type="button" data-mode="nocturne">Nocturne</button></div>
     </div>
@@ -1782,9 +1911,96 @@ function arcPath(cx,cy,r,a0,a1){const p0=polar(cx,cy,r,a0),p1=polar(cx,cy,r,a1);
 function roman(n){return ["","I","II","III","IV","V","VI","VII","VIII","IX"][n]||String(n)}
 function makePyTable(r=null){const host=$("#pyTable");const letters=r?r.letters:[];const hits={};letters.forEach(l=>{hits[l.char]=(hits[l.char]||0)+1});let h="";for(let n=1;n<=9;n++)h+=`<div class="py-cell num">${n}</div>`;const rows=[["A","B","C","D","E","F","G","H","I"],["J","K","L","M","N","O","P","Q","R"],["S","T","U","V","W","X","Y","Z",""]];rows.forEach(row=>row.forEach(ch=>{const obj=letters.find(l=>l.char===ch);h+=`<div class="py-cell ${hits[ch]?"hit":""} ${obj&&obj.isVowel?"vowel":""}">${ch||"·"}</div>`}));host.innerHTML=h}
 function emptyCosmograph(){return cosmographSVG(null,{interactive:false})}
-const NARROW=()=>window.matchMedia("(max-width:840px)").matches;
+const NARROW=()=>window.matchMedia("(max-width:840px), (orientation:landscape) and (max-height:500px)").matches;
 const CAST={sweepStart:.18,sweep:1.72,band:1.50,bandStep:.20,label:2.42,labelStep:.15,
             bead:2.80,beadStep:.16,core:3.18,num:3.48,name:4.12,total:5900};
+/* V12.15.1 · identity-name safe zone. All values are cosmograph SVG units (plate centre 380,380).
+   The name block is laid out downward from the true bottom of the centre disc, so a longer wrap can
+   push the type/date labels down but can never lift the name into the disc. */
+const PLATE_C=380,CENTER_R=92,CENTER_STROKE_MAX=1.8;   // .c-center r and its heaviest stroke-width in the stylesheet
+const NAME_ZONE={
+  CENTER_SAFE_BOTTOM:PLATE_C+CENTER_R+CENTER_STROKE_MAX/2, // 472.9 · outer edge of the centre disc
+  NAME_SAFE_GAP:14,          // breathing room between that edge and the top of the name's em box
+  LOWER_LIMIT:628,           // the whole lower block ends above the "5" sector numeral (ink top ≈ 638)
+  ASCENT:.98,DESCENT:.25,LEADING:1.14, // em-box ascent: accented capitals reach .97em in the display face
+  BAND_HALF:15,SIDE_PAD:4,   // widest (focused) sphere stroke half-width, plus clearance from its cut end
+  MIN_SIZE:12,MAX_LINES:3,
+  TYPE_GAP:12,FOOT_GAP:10,TYPE_Y:552,FOOT_Y:604  // TYPE_Y/FOOT_Y are the unchanged single-line positions
+};
+/* Conservative capital advances (em): the wider of Libre Caslon Display and the Georgia fallback. */
+const NAME_GLYPH_W={A:.672,B:.655,C:.676,D:.749,E:.653,F:.599,G:.725,H:.815,I:.39,J:.518,K:.694,L:.604,M:.927,N:.767,O:.744,P:.61,Q:.744,R:.702,S:.561,T:.665,U:.756,V:.667,W:.976,X:.715,Y:.615,Z:.602," ":.25,"'":.27,"’":.27,"-":.4,".":.27,",":.27,"…":.81};
+function nameGlyphW(ch){
+  if(NAME_GLYPH_W[ch]!==undefined)return NAME_GLYPH_W[ch];
+  const base=ch.normalize?ch.normalize("NFD").replace(/[\u0300-\u036F]/g,""):ch;
+  if(!base||/[\u200B-\u200D\u2060\uFEFF]/.test(ch))return 0;
+  if(base.length===1&&NAME_GLYPH_W[base]!==undefined)return NAME_GLYPH_W[base];
+  if(/[0-9]/.test(base))return .62;
+  if(/[\u2010-\u2015]/.test(ch))return 1;
+  return /[\x21-\x7e]/.test(base)?.65:.9;
+}
+function nameTextW(s,ls){return [...s].reduce((a,ch)=>a+nameGlyphW(ch)+ls,0)}
+function layoutIdentityName(raw,narrow,HW,innerRatio){
+  const Z=NAME_ZONE,baseCap=narrow?12:14,scale=narrow?1.06:1,ls=narrow?.02:.05;
+  const subSize=narrow?18:13,footSize=narrow?14:10.5;   // mirror the .c-name-sub/.c-name-foot sizes; set inline below
+  const top=Z.CENTER_SAFE_BOTTOM+Z.NAME_SAFE_GAP;
+  const NAME_MAX_WIDTH=2*(HW*innerRatio-Z.SIDE_PAD);    // stays inside the cut ends of the sphere bands
+  const footMax=Z.LOWER_LIMIT-footSize*.2,typeMax=footMax-footSize*.7-Z.FOOT_GAP-subSize*.32;
+  const NAME_MAX_HEIGHT=typeMax-subSize*.78-Z.TYPE_GAP-top;
+  // Tokens: words, with over-long words broken after hyphens first, then into even chunks.
+  const tokenize=cap=>{
+    const out=[];
+    raw.split(" ").filter(Boolean).forEach(word=>{
+      if(word.length<=cap){out.push({t:word,glue:false});return}
+      word.replace(/([-\u2010-\u2015])/g,"$1\u0000").split("\u0000").filter(Boolean).forEach((pc,j)=>{
+        const n=Math.ceil(pc.length/cap),size=Math.ceil(pc.length/n);
+        for(let i=0;i<pc.length;i+=size)out.push({t:pc.slice(i,i+size),glue:j>0||i>0});
+      });
+    });
+    return out;
+  };
+  // Greedy fill gives the fewest lines under a character cap.
+  const countLines=(tks,cap)=>{let k=0,cur="";tks.forEach(tk=>{const cand=cur?cur+(tk.glue?"":" ")+tk.t:tk.t;if(cand.length<=cap)cur=cand;else{k++;cur=tk.t}});return k+(cur?1:0)};
+  // Prefer the ordinary cap; relax it a little (smaller type) before truncating a name that would need a 4th line.
+  let cap=baseCap,tokens=tokenize(cap),k=countLines(tokens,cap);
+  for(let c2=baseCap+1;k>Z.MAX_LINES&&c2<=baseCap+6;c2++){const t2=tokenize(c2),k2=countLines(t2,c2);if(k2<=Z.MAX_LINES){cap=c2;tokens=t2;k=k2}}
+  if(k>Z.MAX_LINES){cap=baseCap;tokens=tokenize(cap);k=countLines(tokens,cap)}
+  const joinTokens=(a,b)=>tokens.slice(a,b).reduce((s,tk,i)=>s+(i&&!tk.glue?" ":"")+tk.t,"");
+  // The greedy line count is kept and the words are re-balanced across those lines.
+  let lines;
+  if(k<=Z.MAX_LINES){
+    let best=null;
+    const tryCuts=cuts=>{
+      const edges=[0,...cuts,tokens.length],ls2=edges.slice(1).map((e,i)=>joinTokens(edges[i],e));
+      if(ls2.some(l=>!l||l.length>cap))return;
+      const ws=ls2.map(l=>nameTextW(l,ls)),score=[Math.max(...ws),ws.reduce((a,w)=>a+w*w,0)];
+      if(!best||score[0]<best.score[0]-1e-9||(Math.abs(score[0]-best.score[0])<1e-9&&score[1]<best.score[1]))best={lines:ls2,score};
+    };
+    if(k<=1)tryCuts([]);
+    else if(k===2)for(let a=1;a<tokens.length;a++)tryCuts([a]);
+    else for(let a=1;a<tokens.length;a++)for(let b=a+1;b<tokens.length;b++)tryCuts([a,b]);
+    lines=best?best.lines:[joinTokens(0,tokens.length)];
+  }else{
+    // Too long for three lines: two greedy lines, then an ellipsised remainder (word spaces kept).
+    lines=[];let start=0;
+    for(let li=0;li<Z.MAX_LINES-1;li++){let end=start+1;while(end<tokens.length&&joinTokens(start,end+1).length<=cap)end++;lines.push(joinTokens(start,end));start=end}
+    const rest=joinTokens(start,tokens.length);
+    lines.push(rest.length>cap?rest.slice(0,cap-1).replace(/[\s\-\u2010-\u2015]+$/,"")+"…":rest);
+  }
+  const longest=Math.max(...lines.map(l=>l.length));
+  let size=(longest<=9?17.5:longest<=12?15.5:13.8)*scale;      // unchanged size ladder for ordinary names
+  const widest=Math.max(...lines.map(l=>nameTextW(l,ls)));
+  size=Math.min(size,NAME_MAX_WIDTH/widest,NAME_MAX_HEIGHT/(Z.ASCENT+(lines.length-1)*Z.LEADING+Z.DESCENT));
+  if(size<Z.MIN_SIZE){
+    size=Z.MIN_SIZE;
+    lines=lines.map(l=>{let s=l;while(s.length>1&&nameTextW(s,ls)*size>NAME_MAX_WIDTH)s=s.slice(0,-2)+"…";return s});
+  }
+  size=Math.floor(size*100)/100;
+  const first=top+Z.ASCENT*size,step=Z.LEADING*size;
+  const bottom=first+(lines.length-1)*step+Z.DESCENT*size;
+  const typeY=Math.max(Z.TYPE_Y,bottom+Z.TYPE_GAP+subSize*.78);
+  const footY=Math.max(Z.FOOT_Y,typeY+subSize*.32+Z.FOOT_GAP+footSize*.7);
+  return {lines,size,first,step,typeY,footY,subSize,footSize,NAME_MAX_WIDTH,NAME_MAX_HEIGHT};
+}
 function cosmographSVG(r,opts={}){
   const mini=!!opts.mini;
   const interactiveTarget=!!r&&!mini;
@@ -1794,23 +2010,10 @@ function cosmographSVG(r,opts={}){
   const narrow=NARROW();
   const ALPHA="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const rawIdentity=r?String(r.name||"").trim().toUpperCase().replace(/\s+/g," "):"";
-  const splitLongToken=(token,cap)=>{const out=[];for(let i=0;i<token.length;i+=cap)out.push(token.slice(i,i+cap));return out};
-  const wrapIdentity=(raw,cap=13,maxLines=3)=>{
-    if(!raw)return [];
-    const tokens=raw.split(" ").flatMap(t=>t.length>cap?splitLongToken(t,cap):[t]);
-    const lines=[];let cur="";
-    for(const token of tokens){const cand=cur?cur+" "+token:token;if(cand.length<=cap)cur=cand;else{if(cur)lines.push(cur);cur=token}}
-    if(cur)lines.push(cur);
-    if(lines.length>maxLines){const kept=lines.slice(0,maxLines);const tail=lines.slice(maxLines-1).join("");kept[maxLines-1]=(tail.length>cap?tail.slice(0,cap-1)+"…":tail);return kept}
-    return lines;
-  };
-  const nameLines=r?wrapIdentity(rawIdentity,narrow?12:14,3):[];
-  const longestName=nameLines.length?Math.max(...nameLines.map(x=>x.length)):0;
-  const nameSize=(longestName<=9?17.5:longestName<=12?15.5:13.8)*(narrow?1.06:1);
   const baseHW=narrow?88:76;
   const lengthAllowance=r?Math.min(25,Math.max(0,rawIdentity.length-10)*1.45):0;
-  const textAllowance=longestName?Math.max(0,(longestName*nameSize*.57)/2+14-baseHW):0;
-  const HW=mini?0:Math.min(103,Math.max(baseHW,baseHW+lengthAllowance,textAllowance+baseHW));
+  const HW=mini?0:Math.min(103,baseHW+lengthAllowance);   // channel half-width; same values as V12.15
+  const nameLayout=(r&&!mini)?layoutIdentityName(rawIdentity,narrow,HW,(RING.personality-NAME_ZONE.BAND_HALF)/RING.personality):null;
   const freq=r?r.frequency:{};const max=r?Math.max(1,...Object.values(freq)):1;
   const gapOf=rad=>{if(!HW)return 0;const safe=Math.min(HW,rad-18);return safe>0?Math.asin(safe/rad)/DEG:0};
   const arcLen=(rad,sweep)=>(sweep/360)*2*Math.PI*rad;
@@ -1871,7 +2074,8 @@ function cosmographSVG(r,opts={}){
     const dom=r&&r.dominant.includes(n),miss=r&&r.missing.includes(n);
     const col=["var(--gold)","var(--blue)","var(--green)","var(--red)"][n%4];
     const op=r?(miss?.12:(dom?.95:.26+.44*cnt/max)):.16;
-    let inner=`<path class="c-dna ${miss?"missing":""} ${dom?"dominant":""}" d="${arcPath(c,c,292,a0,a1)}" style="stroke:${col};opacity:${op}"/>`+
+    let inner=(interactiveTarget?`<path class="c-num-hit" d="${arcPath(c,c,292,a0,a1)}"/>`:"")+
+              `<path class="c-dna ${miss?"missing":""} ${dom?"dominant":""}" d="${arcPath(c,c,292,a0,a1)}" style="stroke:${col};opacity:${op}"/>`+
               `<path class="c-bandshade" d="${arcPath(c,c,285,a0+1.5,a1-1.5)}"/>`;
     if(!mini){
       const p=polar(c,c,266,mid);
@@ -1949,16 +2153,12 @@ function cosmographSVG(r,opts={}){
 
   const centerNum=r?(r.birth?r.birth.lifePath:r.expression):"·";
   const centerLab=r?(r.birth?"LIFE PATH":"EXPRESSION"):"AWAITING";
-  const lineCount=nameLines.length||1;
-  const nameStartY=lineCount===1?505:lineCount===2?491:482;
-  const nameStep=lineCount===3?17:19;
-  const typeY=lineCount===3?548:552;
-  const footY=lineCount===3?598:604;
+  const NL=nameLayout;
   const lower=mini?"":`<g class="ink" style="--d:${CAST.name}s">`+(r
-    ? `<text class="c-name" x="${c}" y="${nameStartY}" style="font-size:${nameSize}px">`+
-      nameLines.map((l,i)=>`<tspan x="${c}" dy="${i?nameStep:0}">${esc(l)}</tspan>`).join("")+`</text>`+
-      `<text class="c-name-sub" x="${c}" y="${typeY}">${esc(String(r.type).slice(0,22))}</text>`+
-      `<text class="c-name-foot" x="${c}" y="${footY}">${r.dob?esc(r.dob):`${r.letters.length} LETTERS`}</text>`
+    ? `<text class="c-name" x="${c}" y="${f(NL.first)}" style="font-size:${NL.size}px">`+
+      NL.lines.map((l,i)=>`<tspan x="${c}" dy="${i?f(NL.step):0}">${esc(l)}</tspan>`).join("")+`</text>`+
+      `<text class="c-name-sub" x="${c}" y="${f(NL.typeY)}" style="font-size:${NL.subSize}px">${esc(String(r.type).slice(0,22))}</text>`+
+      `<text class="c-name-foot" x="${c}" y="${f(NL.footY)}" style="font-size:${NL.footSize}px">${r.dob?esc(r.dob):`${r.letters.length} LETTERS`}</text>`
     : `<text class="c-name" x="${c}" y="506" style="font-size:16px">ENTER A NAME</text>`+
       `<text class="c-name-sub" x="${c}" y="558">and resolve the plate</text>`)+`</g>`;
 
@@ -1997,7 +2197,7 @@ function cosmographSVG(r,opts={}){
     ${sphere("soul")}
     ${rays}
     <g class="ink" style="--d:${CAST.core}s" aria-hidden="true">
-      <circle class="c-center" cx="${c}" cy="${c}" r="92"/>
+      <circle class="c-center" cx="${c}" cy="${c}" r="${CENTER_R}"/>
       <circle class="c-center-ring" cx="${c}" cy="${c}" r="80"/>
       <circle class="c-center-inner" cx="${c}" cy="${c}" r="72"/>
       ${mini?"":`<text class="c-center-type" x="${c}" y="341">${centerLab}</text>`}
@@ -2241,6 +2441,9 @@ if(window.PointerEvent){
 // Events
 $("#resolveForm").addEventListener("submit",e=>{
   e.preventDefault();
+  // Touch devices: close the soft keyboard so it cannot cover the resolved plate or a validation message.
+  const typing=document.activeElement;
+  if(typing&&typing.matches("#resolveForm input")&&window.matchMedia("(pointer:coarse)").matches)typing.blur();
   const name=$("#nameInput").value.trim(),dob=$("#dobInput").value||null;
   if(!normalize(name)){notify("Write a Latin-script name before resolving the figure.");return}
   if(hasUnsupportedNameChars(name)){notify("This name contains characters NUMER cannot map to A-Z. Enter the spelling you want calculated.");return}
