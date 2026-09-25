@@ -963,6 +963,9 @@ h1.brand{margin:0;font-weight:400}
 .number-target:hover .c-dna{stroke-width:23}
 
 
+/* V12.15.6 MOBILE CENTER CLEARANCE
+   The identity-name block now has a larger phone-only exclusion zone below the LIFE PATH/EXPRESSION disc.
+   Long names still reflow/shrink downward inside the existing lower channel; they can never move upward into the disc. */
 /* V12.15.2 FINAL LEGIBILITY PASS
    Raise the smallest manuscript/interface type without changing product geometry,
    calculations, navigation, touch behaviour, or the cosmograph name safe-zone. */
@@ -1920,7 +1923,8 @@ const CAST={sweepStart:.18,sweep:1.72,band:1.50,bandStep:.20,label:2.42,labelSte
 const PLATE_C=380,CENTER_R=92,CENTER_STROKE_MAX=1.8;   // .c-center r and its heaviest stroke-width in the stylesheet
 const NAME_ZONE={
   CENTER_SAFE_BOTTOM:PLATE_C+CENTER_R+CENTER_STROKE_MAX/2, // 472.9 · outer edge of the centre disc
-  NAME_SAFE_GAP:14,          // breathing room between that edge and the top of the name's em box
+  NAME_SAFE_GAP_DESKTOP:20,
+  NAME_SAFE_GAP_PHONE:34,   // hard mobile exclusion zone below the centre disc
   LOWER_LIMIT:628,           // the whole lower block ends above the "5" sector numeral (ink top ≈ 638)
   ASCENT:.98,DESCENT:.25,LEADING:1.14, // em-box ascent: accented capitals reach .97em in the display face
   BAND_HALF:15,SIDE_PAD:4,   // widest (focused) sphere stroke half-width, plus clearance from its cut end
@@ -1942,7 +1946,7 @@ function nameTextW(s,ls){return [...s].reduce((a,ch)=>a+nameGlyphW(ch)+ls,0)}
 function layoutIdentityName(raw,narrow,HW,innerRatio){
   const Z=NAME_ZONE,baseCap=narrow?12:14,scale=narrow?1.06:1,ls=narrow?.02:.05;
   const subSize=narrow?18:13,footSize=narrow?14:10.5;   // mirror the .c-name-sub/.c-name-foot sizes; set inline below
-  const top=Z.CENTER_SAFE_BOTTOM+Z.NAME_SAFE_GAP;
+  const top=Z.CENTER_SAFE_BOTTOM+(narrow?Z.NAME_SAFE_GAP_PHONE:Z.NAME_SAFE_GAP_DESKTOP);
   const NAME_MAX_WIDTH=2*(HW*innerRatio-Z.SIDE_PAD);    // stays inside the cut ends of the sphere bands
   const footMax=Z.LOWER_LIMIT-footSize*.2,typeMax=footMax-footSize*.7-Z.FOOT_GAP-subSize*.32;
   const NAME_MAX_HEIGHT=typeMax-subSize*.78-Z.TYPE_GAP-top;
